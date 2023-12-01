@@ -1,0 +1,35 @@
+.container {
+  .title {
+    display: flex;
+    gap: 20px;
+    font-size: 26px;
+    font-weight: 800;
+    padding: 50px;
+    .itag{
+        background-color: aqua;
+        transition: 300ms;
+    }
+    &.active {
+      transition: 500ms;
+      .itag{
+        transform: rotate(180deg);
+        transition: 300ms;
+      }
+    }
+  }
+  .content {
+    overflow: hidden;
+    transition: 500ms;
+    font-size: 26px;
+    opacity: 85%;
+    height: 0;
+    &.active {
+      height: 170px;
+      background-color: aqua;
+    //   transform: rotate(360deg);
+      .itag{
+        transform: rotate(180deg);
+    }
+    }
+  }
+}
